@@ -85,7 +85,8 @@
   AD.route = function (path, def) { routes[path] = def; };
   function pathFromHash(h) {
     h = String(h || '').replace(/^#/, '').split('?')[0].replace(/^\/+/, '').replace(/\/+$/, '');
-    return (!h || h === 'home') ? '/' : '/' + h;
+    var path = (!h || h === 'home') ? '/' : '/' + h;
+    return (AD.alias && AD.alias[path]) || path;
   }
   function getPath() { return pathFromHash(location.hash); }
   AD.hrefFor = function (path) { return '#' + (path === '/' ? 'home' : path.replace(/^\//, '')); };

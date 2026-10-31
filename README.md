@@ -4,8 +4,9 @@ A fast, static, multi-page site. No build step, no dependencies. Open `index.htm
 or drop the folder on Vercel, Netlify or any static host.
 
 ## Pages
-Home, How it works, The rules, Prizes and charity, Enter (3-step entry wizard), Readers (application form),
-FAQ, Our story, Winners, Contact, and a 404. All pages use hash routes (`#/rules`), so no server setup is needed.
+Home, How it works (with the rules), Prizes (with charity and winners), Enter (3-step entry wizard), FAQ,
+About (our story and contact), and a 404. Old addresses (#rules, #winners, #contact, #readers) still work and
+land on the right page. All pages use hash routes, so no server setup is needed.
 
 ## Where to edit things
 - `js/content.js`: all contest facts (fee, deadline, rules table, FAQ answers, steps, genres, contact email).
@@ -27,7 +28,14 @@ The site is a complete front end. These three things are placeholders:
    how readers score entries. Search the project for `[` to find them. These need the contest owner's answers.
 
 ## Notes
-- The deadline in `content.js` is Feb 28, 2027 (the owner's email). His original website text said Jan 31, 2027.
+- The deadline in `content.js` is Mar 31, 2027 (the owner asked for the end of March 2027).
 - Fonts (Kaushan Script, Courier Prime, Lora) load from Google Fonts. If offline, readable fallbacks are used.
 - Motion respects the "reduce motion" setting. Keyboard focus, skip link and form labels are included.
 - Entry fees and the 5% charity line in the prize slider are an illustration, not a prize promise.
+
+
+## Update, October 30
+- Light turquoise theme with little brown or black, new logo (transparent background) on the home page with FADE IN and FADE OUT sheets.
+- Pages merged from 10 to 6; reader application form removed for now (can be added back later).
+- Charity text: the first contest assists struggling single mothers. Membership fee range shown as $35 to $95.
+- Contest email is still the placeholder `[contest email address]` in `js/content.js` (AD.config.email).
